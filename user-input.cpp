@@ -18,4 +18,18 @@ int main()
 
     cout << "\nPlease enter the total time you have for cooking: ";
     cin >> totalTime;
+
+    totalTime -= first;
+    theNextDishTime = first + another;
+
+    while (totalTime >= 0)
+    {
+        numberOfDishes++;
+        totalTime -= theNextDishTime;
+        theNextDishTime = theNextDishTime + another;
+    }
+
+    cout << "\nThe number of total dishes you can cook is: ";
+    cout << numberOfDishes;
+    cout << "\n";
 }
